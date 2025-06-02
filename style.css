@@ -1,0 +1,435 @@
+*{
+    margin:0;   
+    padding: 0;
+    box-sizing:border-box ;
+    color:aliceblue;
+    text-decoration: none;
+    font-family: Inter;
+    }
+    html{
+      overflow: hidden;
+      height: 100%;
+    }
+body{
+    height:100vh;
+    background-image: url(Images/Rectangle1.png),linear-gradient(to bottom right,rgb(11, 11, 11),rgb(43, 40, 40));
+    background-repeat: no-repeat;
+    background-position: right;
+    overflow: hidden;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+}
+.background-image1{
+background-image: url(Images/1\ 1.png);
+background-repeat: no-repeat;
+background-position: right;
+z-index:2;
+}
+.background-image2{
+    background-image: url(Images/22.png);
+    background-repeat: no-repeat;
+    background-position:right;
+    right:60px;
+    bottom:60px;
+    opacity: 40%;
+    z-index:1;
+}
+.background-image3{
+    background-image:url(Images/JBL\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position:left;
+    position:absolute;
+    background-size: contain;
+    height:50%;
+    width:100%;
+    bottom:0;
+    left:40px;
+}
+.background-image1,.background-image2{
+    position:absolute; /* Position them absolutely */
+    width:100%; 
+    height:100%; 
+    background-repeat: no-repeat;
+    background-size: contain;}
+
+body .img1{
+ float:right;
+ height:200px;
+ width:120px;
+ right:0;
+ bottom:0;
+ z-index: 1;
+}
+header{
+    z-index:1;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: relative;
+}
+nav,button, .title1 ,.title2,.paragraph,.price,.review,.buttons {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+nav span{
+    color:#EE440F;
+    text-align: center;
+}
+.logo{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo img{
+width:100px;
+height:80px;
+}
+.navLink1 {
+    display: flex;
+    margin:auto; 
+}
+.navLink1 ul {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between items */
+}
+.navLink1  ul li a{
+    color:#959292;
+    /***/
+    font-size: 16px; /* Consistent font size */
+    transition: color 0.3s ease;
+}
+.navLink2 ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.navLink2 ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+.navLink2 ul li a {
+    color: #959292;
+    font-size: 16px; /* Consistent font size */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.navLink1 ul li {
+    list-style-type: none;
+    padding: 15px 30px;
+}
+.navLink2 ul{
+    display:flex;
+    align-items: center;
+}
+.navLink2 ul li{
+    list-style-type: none;
+    padding: 10px 20px;
+}
+.navLink2 img {
+    height: 20px;
+    width: 1px;
+}
+.hamburger{
+display: none;
+flex-direction: column;
+justify-content: space-around;
+width: 30px;
+height: 25px;
+position: fixed;
+top: 20px;
+right: 20px;
+z-index: 1000;
+cursor: pointer;
+}
+.hamburger .bar{
+flex-basis: 100%;
+height:4px;
+background-color:rgb(255, 255, 255);
+margin:3px;
+
+
+}
+.grey-star .fa-solid {
+    color:#959292;
+}
+.title1 {
+    margin-top:80px;
+    font-size :24px;
+}
+.title2{
+    margin-top:30px;
+    font-size :37px;
+}
+.paragraph{
+    margin-top: 20px;
+    color:#959292;
+}
+.paragraph p{
+    color:#959292; 
+    font-size: 20px;
+}
+.review{
+    margin-top: 30px;
+    display:flex;
+    margin-bottom: 25px;
+}
+.icons{
+    margin-right:30px;
+    display:flex;
+} 
+.buttons{
+    display: flex;
+}
+.price{
+border: 1px solid white;
+border-radius: 15px;
+padding:5px 10px;
+margin-right:35px;
+}
+button{
+    background-color: #EE440F;
+    border-radius:62px;
+    padding:10px 30px;
+    border:none;
+}
+/*Responsive design*/
+@media(max-width:786px) {
+  body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+    }
+     header {
+        position: relative;
+        z-index: 100;
+    }
+  .container {
+        order: 1; /* Make container appear first */
+        width: 100%;
+        padding: 20px;
+        z-index: 2;
+        background: rgba(11, 11, 11, 0.8); /* Optional: better text readability */
+    }
+    .logo {
+        order: 2; /* Make logo appear after container */
+        width: auto;
+        text-align: center;
+        margin-top: 20px;
+        position: relative; /* Remove any absolute positioning */
+    }
+     /* Background image adjustments */
+    .background-image3 {
+        position: relative;
+        left: 0;
+        bottom: auto;
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 20px 5%; /* Add some padding on sides */
+    position: relative;
+  }
+.navLink1 {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgba(11, 11, 11, 0.95);
+    flex-direction: column;
+    padding-top: 80px;
+    transition: right 0.3s ease;
+    z-index: 100;
+}
+
+  .navLink1 ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navLink1 ul li {
+    padding: 15px 25px;
+    width: 100%;
+    list-style: none;
+  }
+
+  .navLink1 ul li a {
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 1.2rem;}
+.navLink1 ul li a:hover{
+  color:#EE440F;
+  font-size: 1.5rem;
+  }
+.navLink1.active {
+    right: 0;
+    display: flex;
+  }     
+   
+
+      /* Secondary nav menu adjustments */
+    .navLink2 {
+        display: flex;
+        margin-left: auto;
+        padding-right: 15px;
+        order:2;
+    }
+
+    .navLink2 ul {
+        display: flex;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navLink2 ul li {
+        padding: 4px 8px !important;
+    }
+
+    .navLink2 img {
+        height: 20px;
+    }
+
+    /* Hide the text labels if needed */
+    .navLink2 ul li a {
+        font-size: 0; /* Hides text */
+    }
+
+    .navLink2 i {
+        font-size: 16px;
+        margin: 0;
+    }
+
+
+.container{
+   bottom:10px;
+}
+.title1, .title2, .paragraph {
+        text-align: left;
+        width: 100%;
+    }
+.hamburger {
+    position: static; /* Remove any absolute positioning */
+    margin-left: auto; /* Push to the right */
+    margin-right: 20px;
+    order: 3; /* Ensure it's after the logo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+   }
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: all 0.3s linear;
+  }
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+/* iPad Portrait (768px) and Landscape (1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Navigation adjustments */
+nav{
+  padding: 20px 5%;
+}
+    /* Make hamburger visible on iPad */
+.hamburger {
+        display: flex;
+        margin-left: auto;
+        margin-right: 30px;
+}
+    
+    /* Hide desktop nav links */
+.navLink1 {
+    display: none;
+}
+    
+    /* Show mobile menu when active */
+.navLink1.active {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        background: rgba(11, 11, 11, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 100px;
+        z-index: 100;
+}
+    
+/* Adjust logo size */
+.logo img {
+        width: 80px;
+        height: 60px;
+}
+/* Container adjustments */
+.container {
+        padding-top: 40px;
+        margin-top: 50px;
+}
+/* Text sizing */
+.title1 {
+        font-size: 28px;
+}
+.title2 {
+        font-size: 42px;
+}
+.paragraph p {
+        font-size: 22px;
+}
+
+    /* Button sizing */
+button {
+        padding: 12px 35px;
+        font-size: 18px;
+       } 
+}
+
+/* iPad Pro and larger tablets */
+@media (min-width: 1025px) {
+    /* Revert to desktop styles */
+.hamburger {
+display: none;
+}
+.navLink1 {
+ display: flex !important;
+}
+.navLink2 ul li a {
+        font-size: 20px; /* Hides text */
+}
+}
